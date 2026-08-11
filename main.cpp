@@ -9,10 +9,18 @@ int main() {
     std::wstring inData;
     std::wstring delPath;
 
+    // Some things about Win API: 
+    // 1) if we use wcout/wcin - we can use default std out/cin with this windows output commands
+    // because it's consists to buffer overflow
+    // 2) "L" around text, because windows output needs advanced unicode (Unicode+)
+    // which can reading any languages and symbols
+    // 3) "\n" after wroten text, because it's helped us to read new clear line.
+    // This is mean, console buffer starting from clear line wich can be stored our writed path.
+
     std::wcout << L"[ UTIL LOAD ]\n";
     std::wcout << L"Write file/folder path for delete them.\n";
     std::wcout << L"Example:\n";
-    // std::wcout << L"c:/users/dima/desktop/CPU-schema.pdf\n\n";
+    std::wcout << L"*c:/users/dima/desktop/CPU-schema.pdf*\n\n";
     std::wcout << L"Path: ";
 
     std::getline(std::wcin, inData);
@@ -36,8 +44,11 @@ int main() {
         if (delPath == L"Y" || delPath == L"y"){
         // use absolute delete func from windows API, it's delete files or folders from memory
         // and that means one - you don't see deleted data at the bucket!
+        // DeleteFileW don't delete actual data by the path permanently zero out of hard drive
+        // the actual data space marked like UNALLOCATED SPACE and that's why we can't seeing deleted data in the bucket
+        // any action (created file/folder, installing something) will be taking this UNALLOCATED SPACE to new data
         DeleteFileW(processPath);
-        std::wcout << L"Deleted complete!\n\n";
+        std::wcout << L"Delete is complete!\n\n";
         } else if (delPath == L"N" || delPath == L"n"){
             std::wcout << L"Delete canceled.\n\n";
         } else {
