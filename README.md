@@ -2,7 +2,7 @@
 
 <p align="center">
   <!-- <img src="https://github.com/user-attachments/assets/8d9e3181-cb23-481b-8c4b-90921652dd37" width="150" height="150" alt="c++"> -->
-  <img width="110" height="148" alt="logo" src="https://github.com/user-attachments/assets/e2ba25d3-71ce-46a0-84ce-fab8822de73c" />
+  <img width="110" height="148" alt="file-deliting-util" src="https://github.com/user-attachments/assets/3a7f20f2-5031-4795-9fcf-5cf868726ba5" />
 </p>
 
 ## Introduction
