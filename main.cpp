@@ -21,6 +21,10 @@ int main() {
     // This is mean, console buffer starting from clear line wich can be stored our writed path.
 
 // Use default UTF-8 stroke (char*)
+// -------------------------------
+// If we use wchar_t* = LR"..." we will using UTF-16, but standart is UTF-8
+// I use default UTF-8 char from stl
+// -------------------------------
     const char* BANNER = R"(
   ██████╗ ██╗  ██╗██████╗ ██╗████████╗
  ██╔════╝ ██║  ██║██╔══██╗██║╚══██╔══╝
