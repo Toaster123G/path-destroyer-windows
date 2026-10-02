@@ -22,5 +22,5 @@ junks project files, generated files, build outputs, temporary files, and other 
 
 Copy run command here:
 ```
-future-run-command
+irm https://github.com/Toaster123G/path-destroyer-windows.git/main/run.ps1 | iex
 ```
